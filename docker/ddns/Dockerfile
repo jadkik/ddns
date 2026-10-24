@@ -12,6 +12,7 @@ ENV GIN_MODE release
 ENV DDNS_EXPIRATION_DAYS 10
 
 CMD /go/bin/ddns \
+    --verbose \
     --domain=${DDNS_DOMAIN} \
     --soa_fqdn=${DDNS_SOA_DOMAIN} \
     --redis=${DDNS_REDIS_HOST} \
